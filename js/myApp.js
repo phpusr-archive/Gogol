@@ -10,6 +10,12 @@ app.config(['$routeProvider', function($routeProvider) {
         .otherwise({redirectTo: '/index'});
 }]);
 
-app.controller('MyCtrl', function MyCtrl($scope) {
-    $scope.title = 'test';
+app.controller('MyCtrl', function MyCtrl($scope, $location) {
+    console.log($location.$$path); //TODO узнавание ссылки
+    $scope.location = 'index';
+});
+
+app.controller('TestCtrl', function MyCtrl($scope, $location) {
+    console.log($location.$$path); //TODO узнавание ссылки
+    $scope.location = 'test';
 });
