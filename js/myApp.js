@@ -5,7 +5,7 @@
 var app = angular.module('myApp', ['ngSanitize', 'ngRoute']);
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
-        .when('/main', {templateUrl: 'partials/main.html', controller: 'TestCtrl'})
+        .when('/main', {templateUrl: 'partials/main.html', controller: 'MainCtrl'})
         .when('/bio', {templateUrl: 'partials/test.html', controller: 'TestCtrl'})
         .when('/photo', {templateUrl: 'partials/test.html', controller: 'TestCtrl'})
         .when('/artworks', {templateUrl: 'partials/test.html', controller: 'TestCtrl'})
@@ -33,6 +33,15 @@ app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
 
 });
 
-app.controller('TestCtrl', function MyCtrl($rootScope, $scope, $location) {
+/** Main Page */
+app.controller('MainCtrl', function MainCtrl($rootScope, $scope, $http) {
+    $rootScope.changeActiveNav();
+
+    $http.get('data/main.json').success(function(data) {
+        $scope.data = data;
+    });
+});
+
+app.controller('TestCtrl', function MyCtrl($rootScope, $scope) {
     $rootScope.changeActiveNav();
 });
