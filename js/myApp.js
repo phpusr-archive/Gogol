@@ -5,17 +5,17 @@
 var app = angular.module('myApp', ['ngSanitize', 'ngRoute']);
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
-        .when('/index', {templateUrl: 'partials/index.html', controller: 'TestCtrl'})
+        .when('/main', {templateUrl: 'partials/main.html', controller: 'TestCtrl'})
         .when('/bio', {templateUrl: 'partials/test.html', controller: 'TestCtrl'})
         .when('/photo', {templateUrl: 'partials/test.html', controller: 'TestCtrl'})
         .when('/artworks', {templateUrl: 'partials/test.html', controller: 'TestCtrl'})
-        .otherwise({redirectTo: '/index'});
+        .otherwise({redirectTo: '/main'});
 }]);
 
-app.controller('MainCtrl', function MainCtrl($rootScope, $scope, $location) {
+app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
 
     $scope.nav = [
-        {name: 'Главная', link: '#index', path: '/index'},
+        {name: 'Главная', link: '#main', path: '/main'},
         {name: 'Биография', link: '#bio', path: '/bio'},
         {name: 'Фотогалерея', link: '#photo', path: '/photo'},
         {name: 'Произведения', link: '#artworks', path: '/artworks'}
