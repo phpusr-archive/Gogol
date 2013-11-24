@@ -1,4 +1,8 @@
+<ul class="nav nav-pills">
+    <li ng-repeat="p in data"><a ng-click="scrollTo(p.id)">{{p.title}}</a></li>
+</ul>
+
 <div ng-repeat="p in data">
-    <h2>{{p.title}}</h2>
+    <h2 id="{{p.id}}">{{p.title}}</h2>
     <p ng-repeat="t in p.text">{{t}}</p>
 </div>

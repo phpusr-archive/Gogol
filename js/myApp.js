@@ -43,12 +43,19 @@ app.controller('MainCtrl', function MainCtrl($rootScope, $scope, $http) {
 });
 
 /** Bio Page */
-app.controller('BioCtrl', function BioCtrl($rootScope, $scope, $http) {
+app.controller('BioCtrl', function BioCtrl($rootScope, $scope, $http, $location, $anchorScroll) {
     $rootScope.changeActiveNav();
 
     $http.get('data/bio.json').success(function(data) {
         $scope.data = data;
     });
+
+    $scope.scrollTo = function(pId) {
+        var old = $location.hash();
+        $location.hash(pId);
+        $anchorScroll();
+        $location.hash(old);
+    }
 });
 
 app.controller('TestCtrl', function MyCtrl($rootScope, $scope) {
