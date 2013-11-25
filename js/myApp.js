@@ -8,7 +8,7 @@ app.config(['$routeProvider', function($routeProvider) {
         .when('/main', {templateUrl: 'partials/main.html', controller: 'MainCtrl'})
         .when('/bio', {templateUrl: 'partials/bio.html', controller: 'BioCtrl'})
         .when('/photo', {templateUrl: 'partials/test.html', controller: 'TestCtrl'})
-        .when('/artworks', {templateUrl: 'partials/test.html', controller: 'TestCtrl'})
+        .when('/artworks', {templateUrl: 'partials/artworks.html', controller: 'ArtworksCtrl'})
         .otherwise({redirectTo: '/main'});
 }]);
 
@@ -58,6 +58,18 @@ app.controller('BioCtrl', function BioCtrl($rootScope, $scope, $http, $location,
     }
 });
 
-app.controller('TestCtrl', function MyCtrl($rootScope, $scope) {
+/** Artworks Page */
+app.controller('ArtworksCtrl', function ArtworksCtrl($rootScope, $scope, $http) {
+    $rootScope.changeActiveNav();
+
+    $scope.data = [];
+    for (var i=1; i<=3; i++) {
+        $http.get('data/artworks/artwork-' + i + '.json').success(function(data) {
+            $scope.data.push(data);
+        });
+    }
+});
+
+app.controller('TestCtrl', function TestCtrl($rootScope, $scope) {
     $rootScope.changeActiveNav();
 });
