@@ -1,5 +1,8 @@
 <h1>Произведения</h1>
 
 <ul ng-repeat="a in data track by $index">
-    <li>{{a.name}}</li>
+    <li>
+        <img height="250px" ng-src="data/img/{{a.img}}" class="img-rounded" />
+        {{a.name}}
+    </li>
 </ul>
