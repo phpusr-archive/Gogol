@@ -1,8 +1,16 @@
-<ul class="nav nav-pills">
-    <li ng-repeat="p in data"><a ng-click="scrollTo(p.id)">{{p.title}}</a></li>
-</ul>
+<div class="row">
 
-<div ng-repeat="p in data">
-    <h2 id="{{p.id}}">{{p.title}}</h2>
-    <p ng-repeat="t in p.text">{{t}}</p>
+    <div class="col-md-3">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="p in data"><a href="" ng-click="scrollTo(p.id)">{{p.title}}</a></li>
+        </ul>
+    </div>
+
+    <div class="col-md-9">
+        <div ng-repeat="p in data">
+            <h2 id="{{p.id}}">{{p.title}}</h2>
+            <p ng-repeat="t in p.text">{{t}}</p>
+        </div>
+    </div>
+
 </div>
