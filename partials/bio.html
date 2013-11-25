@@ -1,9 +1,11 @@
 <div class="row">
 
     <div class="col-md-3">
-        <ul class="list-group">
-            <li class="list-group-item" ng-repeat="p in data"><a href="" ng-click="scrollTo(p.id)">{{p.title}}</a></li>
-        </ul>
+        <div class="fixed">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="p in data"><a href="" ng-click="scrollTo(p.id)">{{p.title}}</a></li>
+            </ul>
+        </div>
     </div>
 
     <div class="col-md-9">
