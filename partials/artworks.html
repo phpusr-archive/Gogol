@@ -2,8 +2,8 @@
 
 <div class="row">
     <div class="col-md-3" ng-repeat="a in data track by $index">
-        <a href=""><img height="250px" ng-src="data/img/{{a.img}}" class="img-rounded" /></a>
+        <a href="#/artworks/{{a.id}}"><img height="250px" ng-src="data/img/{{a.img}}" class="img-rounded" /></a>
         <h4>{{a.name}}</h4>
-        <div><a href="#">Скачать</a> <a href="#">Прочитать</a></div>
+        <div><a href="#">Скачать</a> <a href="#/artworks/{{a.id}}">Прочитать</a></div>
     </div>
 </div>
