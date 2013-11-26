@@ -9,9 +9,9 @@
 <!-- Example row of columns -->
 <div class="row">
     <div class="col-lg-4" ng-repeat="a in data">
-        <h2>{{a.title}}</h2>
-        <p>{{a.text}}</p>
-        <p><a class="btn btn-primary" ng-href="{{a.link}}" role="button">Читать полностью &raquo;</a></p>
+        <h2>{{a.name}}</h2>
+        <p>{{a.description}}</p>
+        <p><a class="btn btn-primary" ng-href="#/artworks/{{a.id}}" role="button">Читать полностью &raquo;</a></p>
     </div>
 </div>
 

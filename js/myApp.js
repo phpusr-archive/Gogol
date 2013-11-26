@@ -38,7 +38,7 @@ app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
 app.controller('MainCtrl', function MainCtrl($rootScope, $scope, $http) {
     $rootScope.changeActiveNav();
 
-    $http.get('data/main.json').success(function(data) {
+    $http.get('data/artworks.json').success(function(data) {
         $scope.data = data;
     });
 });
