@@ -4,6 +4,6 @@
     <div class="col-md-3" ng-repeat="a in data track by $index">
         <a href="#/artworks/{{a.id}}"><img height="250px" ng-src="data/img/{{a.img}}" class="img-rounded" /></a>
         <h4>{{a.name}}</h4>
-        <div><a href="data/fb2/{{a.file}}">Скачать</a> <a href="#/artworks/{{a.id}}">Прочитать</a></div>
+        <div><a href="data/fb2/{{a.id}}/{{a.file}}">Скачать</a> <a href="#/artworks/{{a.id}}">Прочитать</a></div>
     </div>
 </div>

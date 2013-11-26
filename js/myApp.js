@@ -63,12 +63,9 @@ app.controller('BioCtrl', function BioCtrl($rootScope, $scope, $http, $location,
 app.controller('ArtworksCtrl', function ArtworksCtrl($rootScope, $scope, $http) {
     $rootScope.changeActiveNav();
 
-    $scope.data = [];
-    for (var i=1; i<=3; i++) {
-        $http.get('data/artworks/artwork-' + i + '.json').success(function(data) {
-            $scope.data.push(data);
-        });
-    }
+    $http.get('data/artworks.json').success(function(data) {
+        $scope.data = data;
+    });
 });
 
 /** Read Artwork Page */
