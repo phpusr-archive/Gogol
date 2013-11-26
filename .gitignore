@@ -2,3 +2,5 @@
 /*.iml
 
 /example
+/data/artworks/*/*.html
+/data/artworks/*/*.fb2
