@@ -2,19 +2,16 @@
     {
         "id": 1,
         "name": "Вечера на хуторе близ Диканьки",
-        "img": "vechera.jpg",
         "file": "Gogol_Nikolaj__Vechera_na_hutore_bliz_Dikanki.fb2.zip"
     },
     {
         "id": 2,
         "name": "Мертвые души",
-        "img": "dushi.jpg",
         "file": "Gogol_Nikolaj__Mertvye_dushi.fb2.zip"
     },
     {
         "id": 3,
         "name": "Ревизор",
-        "img": "revizor.jpg",
         "file": "Gogol_Nikolaj__Revizor.fb2.zip"
     }
 ]

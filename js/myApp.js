@@ -73,7 +73,7 @@ app.controller('ArtworkReadCtrl', function ArtworkReadCtrl($rootScope, $scope, $
     $rootScope.changeActiveNav();
 
     var artworkId = $routeParams.artworkId;
-    $http.get('data/artworks/artwork-' + artworkId + '.json').success(function(data) {
+    $http.get('data/artworks/' + artworkId + '/data.json').success(function(data) {
         $scope.data = data;
     });
 });
