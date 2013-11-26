@@ -72,10 +72,13 @@ app.controller('ArtworksCtrl', function ArtworksCtrl($rootScope, $scope, $http) 
 });
 
 /** Read Artwork Page */
-app.controller('ArtworkReadCtrl', function ArtworkReadCtrl($rootScope, $scope, $routeParams) {
+app.controller('ArtworkReadCtrl', function ArtworkReadCtrl($rootScope, $scope, $http, $routeParams) {
     $rootScope.changeActiveNav();
 
-    $scope.artworkId = $routeParams.artworkId;
+    var artworkId = $routeParams.artworkId;
+    $http.get('data/artworks/artwork-' + artworkId + '.json').success(function(data) {
+        $scope.data = data;
+    });
 });
 
 app.controller('TestCtrl', function TestCtrl($rootScope, $scope) {
