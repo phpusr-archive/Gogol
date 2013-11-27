@@ -7,7 +7,7 @@ app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/main', {templateUrl: 'partials/main.html', controller: 'MainCtrl'})
         .when('/bio', {templateUrl: 'partials/bio.html', controller: 'BioCtrl'})
-        .when('/photo', {templateUrl: 'partials/test.html', controller: 'TestCtrl'})
+        .when('/photo', {templateUrl: 'partials/photo.html', controller: 'PhotoCtrl'})
         .when('/artworks', {templateUrl: 'partials/artworks.html', controller: 'ArtworksCtrl'})
         .when('/artworks/:artworkId', {templateUrl: 'partials/artwork-read.html', controller: 'ArtworkReadCtrl'})
         .otherwise({redirectTo: '/main'});
@@ -77,6 +77,13 @@ app.controller('ArtworkReadCtrl', function ArtworkReadCtrl($rootScope, $scope, $
     $http.get('data/artworks/' + artworkId + '/data.json').success(function(data) {
         $scope.data = data;
     });
+});
+
+/** Photo Page **/
+app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope) {
+    $rootScope.changeActiveNav();
+
+    $scope.hello = 'photo';
 });
 
 app.controller('TestCtrl', function TestCtrl($rootScope, $scope) {
