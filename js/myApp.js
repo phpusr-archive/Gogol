@@ -12,6 +12,17 @@ app.config(['$routeProvider', function($routeProvider) {
         .when('/artworks/:artworkId', {templateUrl: 'partials/artwork-read.html', controller: 'ArtworkReadCtrl'})
         .otherwise({redirectTo: '/main'});
 }]);
+/** Включение Фоторамы при загрузке всех изображений */
+app.directive('ngImgOnload', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.bind('load', function() {
+                $(".fotorama").fotorama();
+            });
+        }
+    };
+});
 
 app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
 
@@ -83,7 +94,19 @@ app.controller('ArtworkReadCtrl', function ArtworkReadCtrl($rootScope, $scope, $
 app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope) {
     $rootScope.changeActiveNav();
 
-    $scope.hello = 'photo';
+    //Конфигурация Фоторамы
+    $scope.options  = {
+        width: '100%',
+        height: 400,
+        loop: true,
+        keyboard: true,
+        nav: 'thumbs'
+    };
+
+    $scope.items = [{img: 'http://farm9.staticflickr.com/8042/7918423710_e6dd168d7c_b.jpg', thumb: 'http://farm9.staticflickr.com/8042/7918423710_e6dd168d7c_b.jpg'}
+        ,{img: 'http://farm9.staticflickr.com/8449/7918424278_4835c85e7a_b.jpg', thumb: 'http://farm9.staticflickr.com/8449/7918424278_4835c85e7a_b.jpg'}
+        ,{img: 'http://farm9.staticflickr.com/8449/7918424278_4835c85e7a_b.jpg', thumb: 'http://farm9.staticflickr.com/8449/7918424278_4835c85e7a_b.jpg'}
+    ];
 });
 
 app.controller('TestCtrl', function TestCtrl($rootScope, $scope) {
