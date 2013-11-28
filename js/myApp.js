@@ -91,7 +91,7 @@ app.controller('ArtworkReadCtrl', function ArtworkReadCtrl($rootScope, $scope, $
 });
 
 /** Photo Page **/
-app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope) {
+app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope, $http) {
     $rootScope.changeActiveNav();
 
     //Конфигурация Фоторамы
@@ -106,11 +106,10 @@ app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope) {
         shuffle: true
     };
 
-    $scope.items = [
-        {img: '983b6ddb7ed01.jpg', thumb: '30-046.jpg', caption: 'Гугль'}
-        ,{img: '1273136452_gnv.jpg', thumb: ''}
-        ,{img: 'gogol.jpg', thumb: ''}
-    ];
+    //Загрузка
+    $http.get('data/photo.json').success(function(data) {
+        $scope.items = data;
+    });
 });
 
 app.controller('TestCtrl', function TestCtrl($rootScope, $scope) {
