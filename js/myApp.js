@@ -95,17 +95,21 @@ app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope) {
     $rootScope.changeActiveNav();
 
     //Конфигурация Фоторамы
-    $scope.options  = {
-        width: '100%',
+    $scope.opt  = {
+        width: 300,
         height: 400,
         loop: true,
         keyboard: true,
-        nav: 'thumbs'
+        nav: 'thumbs',
+        fullScreen: true,
+        autoPlay: 3000,
+        shuffle: true
     };
 
-    $scope.items = [{img: 'http://farm9.staticflickr.com/8042/7918423710_e6dd168d7c_b.jpg', thumb: 'http://farm9.staticflickr.com/8042/7918423710_e6dd168d7c_b.jpg'}
-        ,{img: 'http://farm9.staticflickr.com/8449/7918424278_4835c85e7a_b.jpg', thumb: 'http://farm9.staticflickr.com/8449/7918424278_4835c85e7a_b.jpg'}
-        ,{img: 'http://farm9.staticflickr.com/8449/7918424278_4835c85e7a_b.jpg', thumb: 'http://farm9.staticflickr.com/8449/7918424278_4835c85e7a_b.jpg'}
+    $scope.items = [
+        {img: '983b6ddb7ed01.jpg', thumb: '30-046.jpg', caption: 'Гугль'}
+        ,{img: '1273136452_gnv.jpg', thumb: ''}
+        ,{img: 'gogol.jpg', thumb: ''}
     ];
 });
 
