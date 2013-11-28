@@ -1,9 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link  href="http://fotorama.s3.amazonaws.com/4.4.8/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+    <script src="http://fotorama.s3.amazonaws.com/4.4.8/fotorama.js"></script> <!-- 15 KB -->
+
     <title></title>
 </head>
 <body>
     <h1>Test</h1>
+
+    <!--Ленивая загрузка изображений (http://fotorama.io/customize/lazy-load/)-->
+    <div class="fotorama"
+         data-auto="false"
+         data-width="{{opt.width}}"
+         data-height="{{opt.height}}"
+         data-loop="{{opt.loop}}"
+         data-keyboard="{{opt.keyboard}}"
+         data-nav="{{opt.nav}}"
+         data-allowfullscreen="{{opt.fullScreen}}"
+         data-autoplay="{{opt.autoPlay}}"
+         data-shuffle="{{opt.shuffle}}"
+        >
+
+        <a href="../data/photo/983b6ddb7ed01.jpg" ng-repeat="i in items" data-caption="{{i.caption}}" data-thumb="../data/photo/thumb/30-046.jpg">
+            <!--<img ng-src="data/photo/thumb/{{i.thumb}}" ng-img-onload />-->
+        </a>
+        <a href="../data/photo/983b6ddb7ed01.jpg" ng-repeat="i in items" data-caption="{{i.caption}}" data-thumb="../data/photo/thumb/30-046.jpg">
+            <!--<img ng-src="data/photo/thumb/{{i.thumb}}" ng-img-onload />-->
+        </a>
+
+    </div>
+
+    <script>
+        $(".fotorama").fotorama();
+    </script>
 </body>
 </html>
