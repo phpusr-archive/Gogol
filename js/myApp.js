@@ -96,7 +96,7 @@ app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope, $http) {
 
     //Конфигурация Фоторамы
     $scope.opt  = {
-        width: 300,
+        width: 800,
         height: 400,
         loop: true,
         keyboard: true,
