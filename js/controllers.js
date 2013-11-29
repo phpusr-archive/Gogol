@@ -25,7 +25,7 @@ app.controller('MainCtrl', function MainCtrl($rootScope, $scope, $http) {
     $rootScope.changeActiveNav();
 
     $http.get('data/artworks.json').success(function(data) {
-        $scope.data = data;
+        $scope.data = data.slice(0,3);
     });
 });
 
