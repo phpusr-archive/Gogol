@@ -1,39 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <link  href="http://fotorama.s3.amazonaws.com/4.4.8/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
-    <script src="http://fotorama.s3.amazonaws.com/4.4.8/fotorama.js"></script> <!-- 15 KB -->
+    <script src="../lib/jquery/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../lib/angular/angular.js"></script>
+    <script src="../lib/angular/angular-sanitize.js"></script>
+    <script src="../lib/angular/angular-route.js"></script>
+    <script src="../js/myApp.js"></script>
+
+    <style>
+        .scrollspy-example {
+            position: relative;
+            height: 1000px;
+            margin-top: 10px;
+            overflow: auto;
+        }
+    </style>
+
+    <script>
+        jQuery(function(){
+            console.log('jq', $('#death'));
+        })
+    </script>
 
     <title></title>
 </head>
-<body>
+<body ng-controller="BioCtrl">
     <h1>Test</h1>
 
-    <!--Ленивая загрузка изображений (http://fotorama.io/customize/lazy-load/)-->
-    <div class="fotorama"
-         data-auto="false"
-         data-width="{{opt.width}}"
-         data-height="{{opt.height}}"
-         data-loop="{{opt.loop}}"
-         data-keyboard="{{opt.keyboard}}"
-         data-nav="{{opt.nav}}"
-         data-allowfullscreen="{{opt.fullScreen}}"
-         data-autoplay="{{opt.autoPlay}}"
-         data-shuffle="{{opt.shuffle}}"
-        >
+    <div class="row">
+        <div class="col-md-3">
+            <nav id="navbar-example2" style="position: fixed;">
+                <ul class="nav nav-pills nav-stacked">
+                    <li ng-repeat="p in data" repeat-done="init()"><a href="#{{p.id}}">{{p.title}}</a></li>
+                </ul>
+            </nav>
+        </div>
 
-        <a href="../data/photo/983b6ddb7ed01.jpg" ng-repeat="i in items" data-caption="{{i.caption}}" data-thumb="../data/photo/thumb/30-046.jpg">
-            <!--<img ng-src="data/photo/thumb/{{i.thumb}}" ng-img-onload />-->
-        </a>
-        <a href="../data/photo/983b6ddb7ed01.jpg" ng-repeat="i in items" data-caption="{{i.caption}}" data-thumb="../data/photo/thumb/30-046.jpg">
-            <!--<img ng-src="data/photo/thumb/{{i.thumb}}" ng-img-onload />-->
-        </a>
-
+        <div class="col-md-9">
+            <div id="spy" data-offset="0" class="scrollspy-example">
+                <div id="{{p.id}}" ng-repeat="p in data">
+                    <h2>{{p.title}}</h2>
+                    <p ng-repeat="t in p.text">{{t}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script>
-        $(".fotorama").fotorama();
-    </script>
 </body>
 </html>
