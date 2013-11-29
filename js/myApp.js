@@ -106,12 +106,12 @@ app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope, $http) {
         shuffle: true
     };
 
-    //Загрузка
     $http.get('data/photo.json').success(function(data) {
         $scope.items = data;
     });
 });
 
+/** Test Page */
 app.controller('TestCtrl', function TestCtrl($rootScope, $scope) {
     $rootScope.changeActiveNav();
 });
