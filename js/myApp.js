@@ -12,16 +12,13 @@ app.config(['$routeProvider', function($routeProvider) {
         .when('/artworks/:artworkId', {templateUrl: 'partials/artwork-read.html', controller: 'ArtworkReadCtrl'})
         .otherwise({redirectTo: '/main'});
 }]);
-/** Включение Фоторамы при загрузке всех изображений */
-app.directive('ngImgOnload', function() {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            element.bind('load', function() {
-                $(".fotorama").fotorama();
-            });
+/** Выполнение функции при выводе всех элементов ng-repeat */
+app.directive('ngRepeatDone', function() {
+    return function(scope, element, attrs) {
+        if (scope.$last) { // all are rendered
+            scope.$eval(attrs.ngRepeatDone);
         }
-    };
+    }
 });
 
 app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
@@ -91,7 +88,7 @@ app.controller('ArtworkReadCtrl', function ArtworkReadCtrl($rootScope, $scope, $
 });
 
 /** Photo Page **/
-app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope, $http) {
+app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope, $http, $timeout) {
     $rootScope.changeActiveNav();
 
     //Конфигурация Фоторамы
@@ -109,6 +106,13 @@ app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope, $http) {
     $http.get('data/photo.json').success(function(data) {
         $scope.items = data;
     });
+
+    $scope.initFotorama = function() {
+        $timeout(function() {
+            $(".fotorama").fotorama();
+        }, 0);
+    };
+
 });
 
 /** Test Page */
