@@ -13,8 +13,14 @@
          data-shuffle="{{opt.shuffle}}"
         >
 
-        <a href="data/photo/{{i.img}}" ng-repeat="i in items" data-caption="{{i.caption}}" ng-repeat-done="initFotorama()">
+        <a href="data/photo/{{i.img}}"
+           ng-repeat="i in items"
+           ng-repeat-done="initFotorama()"
+           data-caption="{{i.caption}}"
+        >
+
             <img ng-src="data/photo/thumb/{{i.img}}" />
+
         </a>
 
     </div>
