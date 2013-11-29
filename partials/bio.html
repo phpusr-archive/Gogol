@@ -3,7 +3,7 @@
     <div class="col-md-3">
         <div class="fixed">
             <div class="list-group">
-                <a href="" class="list-group-item" ng-repeat="p in data" ng-click="scrollTo(p.id)">{{p.title}}</a> <!--TODO add class active-->
+                <a href="" class="list-group-item" ng-class="{active: activeId == p.id}" ng-repeat="p in data" ng-click="scrollTo(p.id)">{{p.title}}</a>
             </div>
         </div>
     </div>

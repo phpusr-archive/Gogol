@@ -42,6 +42,8 @@ app.controller('BioCtrl', function BioCtrl($rootScope, $scope, $http, $location,
         $location.hash(pId);
         $anchorScroll();
         $location.hash(old);
+
+        $scope.activeId = pId;
     }
 });
 
