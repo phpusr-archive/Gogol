@@ -1,0 +1,16 @@
+<h1>Видео</h1>
+
+<div class="row">
+    <div class="col-md-9" ng-repeat="v in data track by $index">
+
+        <video controls preload="none" width="{{v.width}}" height="{{v.height}}" poster="{{v.poster}}">
+
+            <source ng-src="{{v.file}}" type='video/mp4' />
+
+        </video>
+
+        <h4>{{v.name}} <a ng-href="data/video/{{v.file}}">(Скачать)</a></h4>
+
+    </div>
+</div>
+

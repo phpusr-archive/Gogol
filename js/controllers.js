@@ -5,6 +5,7 @@ app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
         {name: 'Главная', link: '#main', path: '/main'},
         {name: 'Биография', link: '#bio', path: '/bio'},
         {name: 'Фотогалерея', link: '#photo', path: '/photo'},
+        {name: 'Видео', link: '#video', path: '/video'},
         {name: 'Произведения', link: '#artworks', path: '/artworks'}
     ];
 
@@ -93,6 +94,20 @@ app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope, $http, $timeo
         }, 0);
     };
 
+});
+
+/** Video Page */
+app.controller('VideoCtrl', function VideoCtrl($rootScope, $scope, $http) {
+    $rootScope.changeActiveNav();
+
+    $http.get('data/videos.json').success(function(data) {
+        for (var i=0; i<data.length; i++) {
+            data[i].file = '../data/video/' + data[i].file;
+        }
+
+        $scope.data = data;
+        console.log($scope.data)
+    });
 });
 
 /** Test Page */
