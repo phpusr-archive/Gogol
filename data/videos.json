@@ -1,10 +1,16 @@
 [
     {
-        "id": 1,
         "name": "Тайна смерти Гоголя",
         "file": "422559.mp4",
-        "width": 452,
+        "width": 640,
         "height": 280,
-        "poster": "http://video-js.zencoder.com/oceans-clip.png"
+        "poster": "422559.mp4_snapshot_05.56_[2013.11.30_19.59.20].jpg"
+    },
+    {
+        "name": "Николай Васильевич Гоголь",
+        "file": "gogol.mp4",
+        "width": 640,
+        "height": 360,
+        "poster": "gogol.mp4_snapshot_04.45_[2013.11.30_19.57.26].jpg"
     }
 ]

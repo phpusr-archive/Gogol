@@ -101,12 +101,14 @@ app.controller('VideoCtrl', function VideoCtrl($rootScope, $scope, $http) {
     $rootScope.changeActiveNav();
 
     $http.get('data/videos.json').success(function(data) {
+        //TODO заглушка для постеров, чтобы не было ошибки в консоли
+        var path = '../data/video/';
         for (var i=0; i<data.length; i++) {
-            data[i].file = '../data/video/' + data[i].file;
+            data[i].file = path + data[i].file;
+            data[i].poster = path + data[i].poster;
         }
 
         $scope.data = data;
-        console.log($scope.data)
     });
 });
 
