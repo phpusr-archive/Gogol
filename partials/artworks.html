@@ -1,7 +1,7 @@
 <h1>Произведения</h1>
 
 <div class="row">
-    <div class="col-md-3" ng-repeat="a in data track by $index">
+    <div class="col-md-3" ng-repeat="a in data track by $index"> <!--TODO rename folder to artwork-->
         <a href="#/artworks/{{a.id}}"><img height="250px" ng-src="data/artworks/{{a.id}}/thumb.jpg" class="img-rounded" /></a>
         <h4>{{a.name}}</h4>
         <div><a href="data/artworks/{{a.id}}/{{a.file}}">Скачать</a> <a href="#/artworks/{{a.id}}">Прочитать</a></div>
