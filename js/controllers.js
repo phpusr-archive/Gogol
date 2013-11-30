@@ -26,7 +26,7 @@ app.controller('MainCtrl', function MainCtrl($rootScope, $scope, $http) {
     $rootScope.changeActiveNav();
 
     $http.get('data/artworks.json').success(function(data) {
-        $scope.data = data.slice(0,3);
+        $scope.data = data.shuffle().slice(0,3);
     });
 });
 
@@ -53,7 +53,7 @@ app.controller('ArtworksCtrl', function ArtworksCtrl($rootScope, $scope, $http) 
     $rootScope.changeActiveNav();
 
     $http.get('data/artworks.json').success(function(data) {
-        $scope.data = data;
+        $scope.data = data.shuffle();
     });
 });
 
