@@ -9,6 +9,8 @@ app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
         {name: 'Произведения', link: 'artwork'}
     ];
 
+    $scope.copyright = 'Анна Доронина 2013';
+
     //Смена страницы
     $rootScope.changeActiveNav = function() {
         var path = $location.$$path;
