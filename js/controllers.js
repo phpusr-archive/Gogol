@@ -25,7 +25,7 @@ app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
 app.controller('MainCtrl', function MainCtrl($rootScope, $scope, $http) {
     $rootScope.changeActiveNav();
 
-    $http.get('data/artworks.json').success(function(data) {
+    $http.get('data/artwork-list.json').success(function(data) {
         $scope.data = data.popular.shuffle().slice(0,3);
     });
 });
@@ -52,7 +52,7 @@ app.controller('BioCtrl', function BioCtrl($rootScope, $scope, $http, $location,
 app.controller('ArtworkCtrl', function ArtworkCtrl($rootScope, $scope, $http, $timeout) {
     $rootScope.changeActiveNav();
 
-    $http.get('data/artworks.json').success(function(data) {
+    $http.get('data/artwork-list.json').success(function(data) {
         $scope.popular = data.popular.shuffle();
         $scope.other = data.other;
     });
@@ -92,7 +92,7 @@ app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope, $http, $timeo
         shuffle: true
     };
 
-    $http.get('data/photos.json').success(function(data) {
+    $http.get('data/photo-list.json').success(function(data) {
         $scope.items = data;
     });
 
@@ -108,7 +108,7 @@ app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope, $http, $timeo
 app.controller('VideoCtrl', function VideoCtrl($rootScope, $scope, $http) {
     $rootScope.changeActiveNav();
 
-    $http.get('data/videos.json').success(function(data) {
+    $http.get('data/video-list.json').success(function(data) {
         //TODO заглушка для постеров, чтобы не было ошибки в консоли
         var path = '../data/video/';
         for (var i=0; i<data.length; i++) {

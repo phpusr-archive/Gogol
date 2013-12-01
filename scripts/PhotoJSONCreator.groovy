@@ -15,7 +15,7 @@ import groovy.io.FileType
 
 static main(def params) {
 
-    new File('../tmp/photos.json').withWriter { out ->
+    new File('../tmp/photo-list.json').withWriter { out ->
         new File('../tmp/img').eachFileRecurse(FileType.FILES) {
             if(it.name.endsWith('.jpg')) {
                 //Путь без имени файла
