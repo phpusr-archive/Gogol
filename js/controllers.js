@@ -5,7 +5,6 @@ app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
         {name: 'Главная', link: 'main'},
         {name: 'Биография', link: 'bio'},
         {name: 'Фотогалерея', link: 'photo'},
-        {name: 'Видео', link: 'video'},
         {name: 'Произведения', link: 'artwork'}
     ];
 
