@@ -1,10 +1,21 @@
 <h1>Произведения</h1>
 
 <div class="row">
-    <div class="col-md-3" ng-repeat="a in data track by $index" style="height: 348px"> <!--TODO rename folder to artwork-->
+    <div class="col-md-3" ng-repeat="a in popular" style="height: 348px"> <!--TODO rename folder to artwork-->
         <a href="#/artworks/{{a.id}}"><img height="250px" ng-src="data/artworks/{{a.id}}/thumb.jpg" class="img-rounded" /></a>
         <h4>{{a.name}}</h4>
         <div><a href="#/artworks/{{a.id}}">Прочитать</a> <a href="data/artworks/{{a.id}}/{{a.file}}">Скачать</a></div>
         <br/>
     </div>
 </div>
+
+<h2>Остальные произведения</h2>
+<div>
+    <ul class="autocolumnlist" ng-repeat="a in other" ng-repeat-done="autocolumnlist()">
+        <li>
+            <a ng-hide="a.new" href="{{a.link}}" target="_blank">{{a.name}}</a>
+            <span ng-show="a.new">{{a.name}}</span>
+        </li>
+    </ul>
+</div>
+<div style="clear: left;"></div>

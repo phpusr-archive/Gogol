@@ -49,12 +49,20 @@ app.controller('BioCtrl', function BioCtrl($rootScope, $scope, $http, $location,
 });
 
 /** Artworks Page */
-app.controller('ArtworksCtrl', function ArtworksCtrl($rootScope, $scope, $http) {
+app.controller('ArtworksCtrl', function ArtworksCtrl($rootScope, $scope, $http, $timeout) {
     $rootScope.changeActiveNav();
 
     $http.get('data/artworks.json').success(function(data) {
-        $scope.data = data.shuffle();
+        $scope.popular = data.popular.shuffle();
+        $scope.other = data.other;
     });
+
+    //Вывод в несколько столбцов
+    $scope.autocolumnlist = function() {
+        $timeout(function() {
+            $(".autocolumnlist").autocolumnlist({columns: 2});
+        }, 0);
+    };
 });
 
 /** Read Artwork Page */

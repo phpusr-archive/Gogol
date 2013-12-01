@@ -1,4 +1,4 @@
-[
+{"popular": [
     {
         "id": 1,
         "name": "Вечера на хуторе близ Диканьки",
@@ -35,4 +35,351 @@
         "file": "Gogol_Nikolaj__Shinel.fb2.zip",
         "description": "В департаменте… но лучше не называть, в каком департаменте. Ничего нет сердитее всякого рода департаментов, полков, канцелярий и, словом, всякого рода должностных сословий. Теперь уже всякий частный человек считает в лице своем оскорбленным все общество. Говорят, весьма недавно поступила просьба от одного капитан-исправника, не помню какого-то города, в которой он излагает ясно, что гибнут государственные..."
     }
-]
+],
+"other": [
+    {
+        "name": "Авторская исповедь",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%90%D0%B2%D1%82%D0%BE%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D1%81%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D1%8C&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Ал-Мамун",
+        "link": "https://ru.wikipedia.org/wiki/%D0%90%D0%BB-%D0%9C%D0%B0%D0%BC%D1%83%D0%BD",
+        "new": false
+    }
+    ,{
+        "name": "Альфред",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%90%D0%BB%D1%8C%D1%84%D1%80%D0%B5%D0%B4_(%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8C)&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Аннунциата",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A0%D0%B8%D0%BC_(%D0%BE%D1%82%D1%80%D1%8B%D0%B2%D0%BE%D0%BA)",
+        "new": false
+    }
+    ,{
+        "name": "Арабески",
+        "link": "https://ru.wikipedia.org/wiki/%D0%90%D1%80%D0%B0%D0%B1%D0%B5%D1%81%D0%BA%D0%B8_(%D1%81%D0%B1%D0%BE%D1%80%D0%BD%D0%B8%D0%BA)",
+        "new": false
+    }
+    ,{
+        "name": "«Борис Годунов», поэма Пушкина",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%C2%AB%D0%91%D0%BE%D1%80%D0%B8%D1%81_%D0%93%D0%BE%D0%B4%D1%83%D0%BD%D0%BE%D0%B2%C2%BB,_%D0%BF%D0%BE%D1%8D%D0%BC%D0%B0_%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Вечер накануне Ивана Купала",
+        "link": "https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D1%87%D0%B5%D1%80_%D0%BD%D0%B0%D0%BA%D0%B0%D0%BD%D1%83%D0%BD%D0%B5_%D0%98%D0%B2%D0%B0%D0%BD%D0%B0_%D0%9A%D1%83%D0%BF%D0%B0%D0%BB%D0%B0",
+        "new": false
+    }
+    ,{
+        "name": "Вечера на хуторе близ Диканьки",
+        "link": "https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%B0_%D0%BD%D0%B0_%D1%85%D1%83%D1%82%D0%BE%D1%80%D0%B5_%D0%B1%D0%BB%D0%B8%D0%B7_%D0%94%D0%B8%D0%BA%D0%B0%D0%BD%D1%8C%D0%BA%D0%B8",
+        "new": false
+    }
+    ,{
+        "name": "Взгляд на составление Малороссии",
+        "link": "https://ru.wikipedia.org/wiki/%D0%92%D0%B7%D0%B3%D0%BB%D1%8F%D0%B4_%D0%BD%D0%B0_%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%9C%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B8",
+        "new": false
+    }
+    ,{
+        "name": "Вий",
+        "link": "https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%B9_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)",
+        "new": false
+    }
+    ,{
+        "name": "Владимир третьей степени",
+        "link": "https://ru.wikipedia.org/wiki/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D1%82%D1%80%D0%B5%D1%82%D1%8C%D0%B5%D0%B9_%D1%81%D1%82%D0%B5%D0%BF%D0%B5%D0%BD%D0%B8",
+        "new": false
+    }
+    ,{
+        "name": "Выбранные места из переписки с друзьями",
+        "link": "https://ru.wikipedia.org/wiki/%D0%92%D1%8B%D0%B1%D1%80%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_%D0%BC%D0%B5%D1%81%D1%82%D0%B0_%D0%B8%D0%B7_%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D0%BA%D0%B8_%D1%81_%D0%B4%D1%80%D1%83%D0%B7%D1%8C%D1%8F%D0%BC%D0%B8",
+        "new": false
+    }
+    ,{
+        "name": "Ганц Кюхельгартен",
+        "link": "https://ru.wikipedia.org/wiki/%D0%93%D0%B0%D0%BD%D1%86_%D0%9A%D1%8E%D1%85%D0%B5%D0%BB%D1%8C%D0%B3%D0%B0%D1%80%D1%82%D0%B5%D0%BD",
+        "new": false
+    }
+    ,{
+        "name": "Гетьман",
+        "link": "https://ru.wikipedia.org/wiki/%D0%93%D0%B5%D1%82%D1%8C%D0%BC%D0%B0%D0%BD_(%D1%80%D0%BE%D0%BC%D0%B0%D0%BD)",
+        "new": false
+    }
+    ,{
+        "name": "Две главы из малороссийской повести «Страшный Кабан»",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%94%D0%B2%D0%B5_%D0%B3%D0%BB%D0%B0%D0%B2%D1%8B_%D0%B8%D0%B7_%D0%BC%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D0%B8_%C2%AB%D0%A1%D1%82%D1%80%D0%B0%D1%88%D0%BD%D1%8B%D0%B9_%D0%9A%D0%B0%D0%B1%D0%B0%D0%BD%C2%BB&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Девицы Чабловы",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%94%D0%B5%D0%B2%D0%B8%D1%86%D1%8B_%D0%A7%D0%B0%D0%B1%D0%BB%D0%BE%D0%B2%D1%8B&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "«Дождь был продолжительный…»",
+        "link": "https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%B6%D0%B4%D1%8C_%D0%B1%D1%8B%D0%BB_%D0%BF%D1%80%D0%BE%D0%B4%D0%BE%D0%BB%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9",
+        "new": false
+    }
+    ,{
+        "name": "Женитьба",
+        "link": "https://ru.wikipedia.org/wiki/%D0%96%D0%B5%D0%BD%D0%B8%D1%82%D1%8C%D0%B1%D0%B0_(%D0%BF%D1%8C%D0%B5%D1%81%D0%B0)",
+        "new": false
+    }
+    ,{
+        "name": "Заколдованное место",
+        "link": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BB%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BC%D0%B5%D1%81%D1%82%D0%BE",
+        "new": false
+    }
+    ,{
+        "name": "Записки сумасшедшего",
+        "link": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%BF%D0%B8%D1%81%D0%BA%D0%B8_%D1%81%D1%83%D0%BC%D0%B0%D1%81%D1%88%D0%B5%D0%B4%D1%88%D0%B5%D0%B3%D0%BE",
+        "new": false
+    }
+    ,{
+        "name": "Иван Фёдорович Шпонька и его тётушка",
+        "link": "https://ru.wikipedia.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD_%D0%A4%D1%91%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87_%D0%A8%D0%BF%D0%BE%D0%BD%D1%8C%D0%BA%D0%B0_%D0%B8_%D0%B5%D0%B3%D0%BE_%D1%82%D1%91%D1%82%D1%83%D1%88%D0%BA%D0%B0",
+        "new": false
+    }
+    ,{
+        "name": "Италия",
+        "link": "https://ru.wikipedia.org/wiki/%D0%98%D1%82%D0%B0%D0%BB%D0%B8%D1%8F_(%D1%81%D1%82%D0%B8%D1%85%D0%BE%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%B5)",
+        "new": false
+    }
+    ,{
+        "name": "Игроки",
+        "link": "https://ru.wikipedia.org/wiki/%D0%98%D0%B3%D1%80%D0%BE%D0%BA%D0%B8_(%D0%BA%D0%BE%D0%BC%D0%B5%D0%B4%D0%B8%D1%8F)",
+        "new": false
+    }
+    ,{
+        "name": "Коляска",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BB%D1%8F%D1%81%D0%BA%D0%B0_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)",
+        "new": false
+    }
+    ,{
+        "name": "Лакейская",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9B%D0%B0%D0%BA%D0%B5%D0%B9%D1%81%D0%BA%D0%B0%D1%8F",
+        "new": false
+    }
+    ,{
+        "name": "Майская ночь, или утопленница",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BD%D0%BE%D1%87%D1%8C,_%D0%B8%D0%BB%D0%B8_%D1%83%D1%82%D0%BE%D0%BF%D0%BB%D0%B5%D0%BD%D0%BD%D0%B8%D1%86%D0%B0",
+        "new": false
+    }
+    ,{
+        "name": "Мёртвые души",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9C%D1%91%D1%80%D1%82%D0%B2%D1%8B%D0%B5_%D0%B4%D1%83%D1%88%D0%B8",
+        "new": false
+    }
+    ,{
+        "name": "Миргород",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D1%80%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_(%D1%81%D0%B1%D0%BE%D1%80%D0%BD%D0%B8%D0%BA)",
+        "new": false
+    }
+    ,{
+        "name": "Наброски драмы из украинской истории",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%9D%D0%B0%D0%B1%D1%80%D0%BE%D1%81%D0%BA%D0%B8_%D0%B4%D1%80%D0%B0%D0%BC%D1%8B_%D0%B8%D0%B7_%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Невский проспект",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)",
+        "new": false
+    }
+    ,{
+        "name": "Несколько слов о Пушкине",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE_%D1%81%D0%BB%D0%BE%D0%B2_%D0%BE_%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B5",
+        "new": false
+    }
+    ,{
+        "name": "Нечто о Нежине, или Дуракам закон не писан",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%9D%D0%B5%D1%87%D1%82%D0%BE_%D0%BE_%D0%9D%D0%B5%D0%B6%D0%B8%D0%BD%D0%B5,_%D0%B8%D0%BB%D0%B8_%D0%94%D1%83%D1%80%D0%B0%D0%BA%D0%B0%D0%BC_%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD_%D0%BD%D0%B5_%D0%BF%D0%B8%D1%81%D0%B0%D0%BD&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Нос",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D1%81_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)",
+        "new": false
+    }
+    ,{
+        "name": "Ночи на вилле",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D1%87%D0%B8_%D0%BD%D0%B0_%D0%B2%D0%B8%D0%BB%D0%BB%D0%B5",
+        "new": false
+    }
+    ,{
+        "name": "Ночь перед Рождеством",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D1%87%D1%8C_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4_%D0%A0%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%BE%D0%BC_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)",
+        "new": false
+    }
+    ,{
+        "name": "Об архитектуре нынешнего времени",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%9E%D0%B1_%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B5_%D0%BD%D1%8B%D0%BD%D0%B5%D1%88%D0%BD%D0%B5%D0%B3%D0%BE_%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "О движении журнальной литературы в 1834 и 1835 году",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%9E_%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B8_%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D1%8B_%D0%B2_1834_%D0%B8_1835_%D0%B3%D0%BE%D0%B4%D1%83&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "О малороссийских песнях",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9E_%D0%BC%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D1%85_%D0%BF%D0%B5%D1%81%D0%BD%D1%8F%D1%85",
+        "new": false
+    }
+    ,{
+        "name": "О «Современнике»",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%9E_%C2%AB%D0%A1%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA%D0%B5%C2%BB&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "О сословиях в государстве",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%9E_%D1%81%D0%BE%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85_%D0%B2_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "<отрывок из неизвестной драмы>",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%9E%D1%82%D1%80%D1%8B%D0%B2%D0%BE%D0%BA_%D0%B8%D0%B7_%D0%BD%D0%B5%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%BE%D0%B9_%D0%B4%D1%80%D0%B0%D0%BC%D1%8B&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Отрывок из письма, писанного автором вскоре после первого представления «Ревизора» к одному литератору",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9E%D1%82%D1%80%D1%8B%D0%B2%D0%BE%D0%BA_%D0%B8%D0%B7_%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%B0,_%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%BC_%D0%B2%D1%81%D0%BA%D0%BE%D1%80%D0%B5_%D0%BF%D0%BE%D1%81%D0%BB%D0%B5_%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%C2%AB%D0%A0%D0%B5%D0%B2%D0%B8%D0%B7%D0%BE%D1%80%D0%B0%C2%BB_%D0%BA_%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83_%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%83",
+        "new": false
+    }
+    ,{
+        "name": "Петербургские записки 1836 года",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B5_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%BA%D0%B8_1836_%D0%B3%D0%BE%D0%B4%D0%B0&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Петербургские повести",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B5_%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D0%B8",
+        "new": false
+    }
+    ,{
+        "name": "Повесть о капитане Копейкине",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C_%D0%BE_%D0%BA%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B5_%D0%9A%D0%BE%D0%BF%D0%B5%D0%B9%D0%BA%D0%B8%D0%BD%D0%B5",
+        "new": false
+    }
+    ,{
+        "name": "Повесть о том, как поссорился Иван Иванович с Иваном Никифоровичем",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C_%D0%BE_%D1%82%D0%BE%D0%BC,_%D0%BA%D0%B0%D0%BA_%D0%BF%D0%BE%D1%81%D1%81%D0%BE%D1%80%D0%B8%D0%BB%D1%81%D1%8F_%D0%98%D0%B2%D0%B0%D0%BD_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87_%D1%81_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%BC_%D0%9D%D0%B8%D0%BA%D0%B8%D1%84%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87%D0%B5%D0%BC",
+        "new": false
+    }
+    ,{
+        "name": "Портрет",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)",
+        "new": false
+    }
+    ,{
+        "name": "Пропавшая грамота",
+        "link": "https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%BF%D0%B0%D0%B2%D1%88%D0%B0%D1%8F_%D0%B3%D1%80%D0%B0%D0%BC%D0%BE%D1%82%D0%B0",
+        "new": false
+    }
+    ,{
+        "name": "Размышления о Божественной Литургии",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B7%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BE_%D0%91%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9_%D0%9B%D0%B8%D1%82%D1%83%D1%80%D0%B3%D0%B8%D0%B8",
+        "new": false
+    }
+    ,{
+        "name": "Ревизор",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B2%D0%B8%D0%B7%D0%BE%D1%80_(%D0%BA%D0%BE%D0%BC%D0%B5%D0%B4%D0%B8%D1%8F)",
+        "new": false
+    }
+    ,{
+        "name": "Рецензии из «Современника»",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D0%B8_%D0%B8%D0%B7_%C2%AB%D0%A1%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA%D0%B0%C2%BB&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Рецензии, не вошедшие в «Современник»",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D0%B8,_%D0%BD%D0%B5_%D0%B2%D0%BE%D1%88%D0%B5%D0%B4%D1%88%D0%B8%D0%B5_%D0%B2_%C2%AB%D0%A1%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA%C2%BB&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Рим",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A0%D0%B8%D0%BC_(%D0%BE%D1%82%D1%80%D1%8B%D0%B2%D0%BE%D0%BA)",
+        "new": false
+    }
+    ,{
+        "name": "Рудокопов",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%A0%D1%83%D0%B4%D0%BE%D0%BA%D0%BE%D0%BF%D0%BE%D0%B2&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Скульптура, живопись и музыка",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%A1%D0%BA%D1%83%D0%BB%D1%8C%D0%BF%D1%82%D1%83%D1%80%D0%B0,_%D0%B6%D0%B8%D0%B2%D0%BE%D0%BF%D0%B8%D1%81%D1%8C_%D0%B8_%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Семён Семёнович Батюшек",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%A1%D0%B5%D0%BC%D1%91%D0%BD_%D0%A1%D0%B5%D0%BC%D1%91%D0%BD%D0%BE%D0%B2%D0%B8%D1%87_%D0%91%D0%B0%D1%82%D1%8E%D1%88%D0%B5%D0%BA&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Сорочинская ярмарка",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D0%BE%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%8F%D1%80%D0%BC%D0%B0%D1%80%D0%BA%D0%B0_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)",
+        "new": false
+    }
+    ,{
+        "name": "Старосветские помещики",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D0%BE%D1%81%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B5_%D0%BF%D0%BE%D0%BC%D0%B5%D1%89%D0%B8%D0%BA%D0%B8",
+        "new": false
+    }
+    ,{
+        "name": "Страшная месть",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D0%B0%D1%88%D0%BD%D0%B0%D1%8F_%D0%BC%D0%B5%D1%81%D1%82%D1%8C",
+        "new": false
+    }
+    ,{
+        "name": "Страшная рука",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D0%B0%D1%88%D0%BD%D0%B0%D1%8F_%D1%80%D1%83%D0%BA%D0%B0",
+        "new": false
+    }
+    ,{
+        "name": "Тарас Бульба",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D1%80%D0%B0%D1%81_%D0%91%D1%83%D0%BB%D1%8C%D0%B1%D0%B0_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)",
+        "new": false
+    }
+    ,{
+        "name": "Театральный разъезд после представления новой комедии",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%B0%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D1%8A%D0%B5%D0%B7%D0%B4_%D0%BF%D0%BE%D1%81%D0%BB%D0%B5_%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BD%D0%BE%D0%B2%D0%BE%D0%B9_%D0%BA%D0%BE%D0%BC%D0%B5%D0%B4%D0%B8%D0%B8",
+        "new": false
+    }
+    ,{
+        "name": "1834",
+        "link": "https://ru.wikipedia.org/w/index.php?title=1834_(%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8C)&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Тяжба",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%A2%D1%8F%D0%B6%D0%B1%D0%B0_(%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8C)&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Утро делового человека",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A3%D1%82%D1%80%D0%BE_%D0%B4%D0%B5%D0%BB%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0",
+        "new": false
+    }
+    ,{
+        "name": "«Фонарь умирал…»",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%C2%AB%D0%A4%D0%BE%D0%BD%D0%B0%D1%80%D1%8C_%D1%83%D0%BC%D0%B8%D1%80%D0%B0%D0%BB%E2%80%A6%C2%BB&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Что это?",
+        "link": "https://ru.wikipedia.org/w/index.php?title=%D0%A7%D1%82%D0%BE_%D1%8D%D1%82%D0%BE%3F&action=edit&redlink=1",
+        "new": true
+    }
+    ,{
+        "name": "Шинель",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A8%D0%B8%D0%BD%D0%B5%D0%BB%D1%8C_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)",
+        "new": false
+    }
+    ,{
+        "name": "Учебная книга словесности для русского юношества",
+        "link": "https://ru.wikipedia.org/wiki/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81%D0%BB%D0%BE%D0%B2%D0%B5%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%B4%D0%BB%D1%8F_%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%8E%D0%BD%D0%BE%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B0",
+        "new": false
+    }
+]}
