@@ -1,6 +1,6 @@
-
+/** Template Page */
 app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
-
+    //Навигация
     $scope.nav = [
         {name: 'Главная', link: 'main'},
         {name: 'Биография', link: 'bio'},
