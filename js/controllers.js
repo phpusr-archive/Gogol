@@ -65,12 +65,11 @@ app.controller('ArtworksCtrl', function ArtworksCtrl($rootScope, $scope, $http, 
     };
 });
 
-/** Read Artwork Page */
+/** Artwork Read Page */
 app.controller('ArtworkReadCtrl', function ArtworkReadCtrl($rootScope, $scope, $http, $routeParams) {
     $rootScope.changeActiveNav();
 
     var artworkId = $routeParams.artworkId;
-    $scope.data = {id: 'load'}; //TODO можно попробовать сделать анимир-ю
     $http.get('data/artworks/' + artworkId + '/data.json').success(function(data) {
         $scope.data = data;
     });
