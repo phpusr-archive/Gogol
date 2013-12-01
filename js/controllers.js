@@ -2,11 +2,11 @@
 app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
 
     $scope.nav = [
-        {name: 'Главная', link: '#main', path: '/main'},
-        {name: 'Биография', link: '#bio', path: '/bio'},
-        {name: 'Фотогалерея', link: '#photo', path: '/photo'},
-        {name: 'Видео', link: '#video', path: '/video'},
-        {name: 'Произведения', link: '#artwork', path: '/artwork'}
+        {name: 'Главная', link: 'main'},
+        {name: 'Биография', link: 'bio'},
+        {name: 'Фотогалерея', link: 'photo'},
+        {name: 'Видео', link: 'video'},
+        {name: 'Произведения', link: 'artwork'}
     ];
 
     //Смена страницы
@@ -15,7 +15,7 @@ app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
 
         for(var i=0; i<$scope.nav.length; i++) {
             var n = $scope.nav[i];
-            n.cl = n.path == path;
+            n.cl = path == ('/' + n.link);
         }
     };
 
