@@ -7,9 +7,9 @@ app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/main', {templateUrl: 'partials/main.html', controller: 'MainCtrl'})
         .when('/bio', {templateUrl: 'partials/bio.html', controller: 'BioCtrl'})
-        .when('/photo', {templateUrl: 'partials/photos.html', controller: 'PhotoCtrl'})
-        .when('/video', {templateUrl: 'partials/videos.html', controller: 'VideoCtrl'})
-        .when('/artwork', {templateUrl: 'partials/artworks.html', controller: 'ArtworkCtrl'})
+        .when('/photo', {templateUrl: 'partials/photo-list.html', controller: 'PhotoCtrl'})
+        .when('/video', {templateUrl: 'partials/video-list.html', controller: 'VideoCtrl'})
+        .when('/artwork', {templateUrl: 'partials/artwork-list.html', controller: 'ArtworkCtrl'})
         .when('/artwork/:artworkId', {templateUrl: 'partials/artwork-show.html', controller: 'ArtworkReadCtrl'})
         .otherwise({redirectTo: '/main'});
 }]);
