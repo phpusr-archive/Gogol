@@ -48,8 +48,8 @@ app.controller('BioCtrl', function BioCtrl($rootScope, $scope, $http, $location,
     }
 });
 
-/** Artworks Page */
-app.controller('ArtworksCtrl', function ArtworksCtrl($rootScope, $scope, $http, $timeout) {
+/** Artwork Page */
+app.controller('ArtworkCtrl', function ArtworkCtrl($rootScope, $scope, $http, $timeout) {
     $rootScope.changeActiveNav();
 
     $http.get('data/artworks.json').success(function(data) {
