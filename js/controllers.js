@@ -92,7 +92,7 @@ app.controller('PhotoCtrl', function PhotoCtrl($rootScope, $scope, $http, $timeo
         shuffle: true
     };
 
-    $http.get('data/photo.json').success(function(data) {
+    $http.get('data/photos.json').success(function(data) {
         $scope.items = data;
     });
 
