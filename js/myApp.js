@@ -10,7 +10,7 @@ app.config(['$routeProvider', function($routeProvider) {
         .when('/photo', {templateUrl: 'partials/photos.html', controller: 'PhotoCtrl'})
         .when('/video', {templateUrl: 'partials/videos.html', controller: 'VideoCtrl'})
         .when('/artwork', {templateUrl: 'partials/artworks.html', controller: 'ArtworkCtrl'})
-        .when('/artwork/:artworkId', {templateUrl: 'partials/artwork-read.html', controller: 'ArtworkReadCtrl'})
+        .when('/artwork/:artworkId', {templateUrl: 'partials/artwork-show.html', controller: 'ArtworkReadCtrl'})
         .otherwise({redirectTo: '/main'});
 }]);
 /** Выполнение функции при выводе всех элементов ng-repeat */
