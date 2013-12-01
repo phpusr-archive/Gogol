@@ -2,7 +2,7 @@
 /*.iml
 
 /example
-/data/artworks/*/*.html
-/data/artworks/*/*.fb2
+/data/artwork/*/*.html
+/data/artwork/*/*.fb2
 /data/video/*.mp4
 /tmp

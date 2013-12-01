@@ -71,7 +71,7 @@ app.controller('ArtworkReadCtrl', function ArtworkReadCtrl($rootScope, $scope, $
 
     var artworkId = $routeParams.artworkId;
     $scope.data = {id: artworkId};
-    $http.get('data/artworks/' + artworkId + '/data.json').success(function(data) {
+    $http.get('data/artwork/' + artworkId + '/data.json').success(function(data) {
         $scope.data = data;
     });
 });
