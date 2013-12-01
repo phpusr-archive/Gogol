@@ -1,9 +1,9 @@
 <h1>{{data.name}}</h1>
 
 <div>
-    <img ng-hide="data.id" height="100px" src="css/ajax-loader-2.gif" />
-    <img ng-show="data.id" height="250px" ng-src="data/artworks/{{data.id}}/thumb.jpg" class="img-rounded" />
+    <img height="250px" ng-src="data/artworks/{{data.id}}/thumb.jpg" class="img-rounded" />
 </div>
 <br/>
 
+<div ng-hide="data.text"><p class="lead">Загрузка книги, пожалуйста подождите...</p></div>
 <div ng-bind-html="data.text"></div>
