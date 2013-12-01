@@ -109,7 +109,6 @@ app.controller('VideoCtrl', function VideoCtrl($rootScope, $scope, $http) {
     $rootScope.changeActiveNav();
 
     $http.get('data/video-list.json').success(function(data) {
-        //TODO заглушка для постеров, чтобы не было ошибки в консоли
         var path = '../data/video/';
         for (var i=0; i<data.length; i++) {
             data[i].file = path + data[i].file;
