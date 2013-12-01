@@ -3,12 +3,13 @@
 <head>
     <script src="../lib/jquery/jquery-1.10.2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
-    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 
     <script src="../lib/angular/angular.js"></script>
     <script src="../lib/angular/angular-sanitize.js"></script>
     <script src="../lib/angular/angular-route.js"></script>
     <script src="../js/myApp.js"></script>
+
+    <script src="../../Example/autocolumnlist/jquery.autocolumnlist.js"></script>
 
     <style>
         .scrollspy-example {
@@ -21,32 +22,113 @@
 
     <script>
         jQuery(function(){
-            console.log('jq', $('#death'));
+            console.log('jq');
+            var s = '';
+            $("ul li a").each(function() {
+                s += ',{\n\t"name": "';
+                s += $(this).text();
+                s += '",\n\t"link": "https://ru.wikipedia.org';
+                s += $(this).attr('href');
+                s += '",\n\t"new": ';
+                s += ($(this).attr('class') == 'new') ? 'true' : 'false';
+                s += '\n}\n';
+            });
+            console.log(s);
+             $('#code').text(s);
+
+            $('#suk').autocolumnlist({columns: 2});
         })
     </script>
 
+    <style type="text/css">
+        .list .column {float: left; width: 430px;}
+        .list li {margin: 5px 15px; vertical-align: top;}
+    </style>
+
     <title></title>
 </head>
-<body ng-controller="BioCtrl">
+<body>
     <h1>Test</h1>
 
-    <div class="row">
-        <div class="col-md-3">
-            <nav id="navbar-example2" style="position: fixed;">
-                <ul class="nav nav-pills nav-stacked">
-                    <li ng-repeat="p in data" repeat-done="init()"><a href="#{{p.id}}">{{p.title}}</a></li>
-                </ul>
-            </nav>
-        </div>
+    <pre id="code">
+        пишу куда хочу
 
-        <div class="col-md-9">
-            <div id="spy" data-offset="0" class="scrollspy-example">
-                <div id="{{p.id}}" ng-repeat="p in data">
-                    <h2>{{p.title}}</h2>
-                    <p ng-repeat="t in p.text">{{t}}</p>
-                </div>
-            </div>
-        </div>
+        и  здесь
+            и здесь
+    </pre>
+
+    <div class="list">
+    <ul id="suk">
+        <li><a href="/w/index.php?title=%D0%90%D0%B2%D1%82%D0%BE%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D1%81%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D1%8C&amp;action=edit&amp;redlink=1" class="new" title="Авторская исповедь (страница отсутствует)">Авторская исповедь</a></li>
+        <li><a href="/wiki/%D0%90%D0%BB-%D0%9C%D0%B0%D0%BC%D1%83%D0%BD" title="Ал-Мамун" class="mw-redirect">Ал-Мамун</a></li>
+        <li><a href="/w/index.php?title=%D0%90%D0%BB%D1%8C%D1%84%D1%80%D0%B5%D0%B4_(%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8C)&amp;action=edit&amp;redlink=1" class="new" title="Альфред (Гоголь) (страница отсутствует)">Альфред</a></li>
+        <li><a href="/wiki/%D0%A0%D0%B8%D0%BC_(%D0%BE%D1%82%D1%80%D1%8B%D0%B2%D0%BE%D0%BA)" title="Рим (отрывок)">Аннунциата</a></li>
+        <li><a href="/wiki/%D0%90%D1%80%D0%B0%D0%B1%D0%B5%D1%81%D0%BA%D0%B8_(%D1%81%D0%B1%D0%BE%D1%80%D0%BD%D0%B8%D0%BA)" title="Арабески (сборник)">Арабески</a></li>
+        <li><a href="/w/index.php?title=%C2%AB%D0%91%D0%BE%D1%80%D0%B8%D1%81_%D0%93%D0%BE%D0%B4%D1%83%D0%BD%D0%BE%D0%B2%C2%BB,_%D0%BF%D0%BE%D1%8D%D0%BC%D0%B0_%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0&amp;action=edit&amp;redlink=1" class="new" title="«Борис Годунов», поэма Пушкина (страница отсутствует)">«Борис Годунов», поэма Пушкина</a></li>
+        <li><a href="/wiki/%D0%92%D0%B5%D1%87%D0%B5%D1%80_%D0%BD%D0%B0%D0%BA%D0%B0%D0%BD%D1%83%D0%BD%D0%B5_%D0%98%D0%B2%D0%B0%D0%BD%D0%B0_%D0%9A%D1%83%D0%BF%D0%B0%D0%BB%D0%B0" title="Вечер накануне Ивана Купала">Вечер накануне Ивана Купала</a></li>
+        <li><a href="/wiki/%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%B0_%D0%BD%D0%B0_%D1%85%D1%83%D1%82%D0%BE%D1%80%D0%B5_%D0%B1%D0%BB%D0%B8%D0%B7_%D0%94%D0%B8%D0%BA%D0%B0%D0%BD%D1%8C%D0%BA%D0%B8" title="Вечера на хуторе близ Диканьки">Вечера на хуторе близ Диканьки</a></li>
+        <li><a href="/wiki/%D0%92%D0%B7%D0%B3%D0%BB%D1%8F%D0%B4_%D0%BD%D0%B0_%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%9C%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B8" title="Взгляд на составление Малороссии">Взгляд на составление Малороссии</a></li>
+        <li><a href="/wiki/%D0%92%D0%B8%D0%B9_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)" title="Вий (повесть)">Вий</a></li>
+        <li><a href="/wiki/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D1%82%D1%80%D0%B5%D1%82%D1%8C%D0%B5%D0%B9_%D1%81%D1%82%D0%B5%D0%BF%D0%B5%D0%BD%D0%B8" title="Владимир третьей степени">Владимир третьей степени</a></li>
+        <li><a href="/wiki/%D0%92%D1%8B%D0%B1%D1%80%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_%D0%BC%D0%B5%D1%81%D1%82%D0%B0_%D0%B8%D0%B7_%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D0%BA%D0%B8_%D1%81_%D0%B4%D1%80%D1%83%D0%B7%D1%8C%D1%8F%D0%BC%D0%B8" title="Выбранные места из переписки с друзьями">Выбранные места из переписки с друзьями</a></li>
+        <li><a href="/wiki/%D0%93%D0%B0%D0%BD%D1%86_%D0%9A%D1%8E%D1%85%D0%B5%D0%BB%D1%8C%D0%B3%D0%B0%D1%80%D1%82%D0%B5%D0%BD" title="Ганц Кюхельгартен">Ганц Кюхельгартен</a></li>
+        <li><a href="/wiki/%D0%93%D0%B5%D1%82%D1%8C%D0%BC%D0%B0%D0%BD_(%D1%80%D0%BE%D0%BC%D0%B0%D0%BD)" title="Гетьман (роман)">Гетьман</a></li>
+        <li><a href="/w/index.php?title=%D0%94%D0%B2%D0%B5_%D0%B3%D0%BB%D0%B0%D0%B2%D1%8B_%D0%B8%D0%B7_%D0%BC%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D0%B8_%C2%AB%D0%A1%D1%82%D1%80%D0%B0%D1%88%D0%BD%D1%8B%D0%B9_%D0%9A%D0%B0%D0%B1%D0%B0%D0%BD%C2%BB&amp;action=edit&amp;redlink=1" class="new" title="Две главы из малороссийской повести «Страшный Кабан» (страница отсутствует)">Две главы из малороссийской повести «Страшный Кабан»</a></li>
+        <li><a href="/w/index.php?title=%D0%94%D0%B5%D0%B2%D0%B8%D1%86%D1%8B_%D0%A7%D0%B0%D0%B1%D0%BB%D0%BE%D0%B2%D1%8B&amp;action=edit&amp;redlink=1" class="new" title="Девицы Чабловы (страница отсутствует)">Девицы Чабловы</a></li>
+        <li><a href="/wiki/%D0%94%D0%BE%D0%B6%D0%B4%D1%8C_%D0%B1%D1%8B%D0%BB_%D0%BF%D1%80%D0%BE%D0%B4%D0%BE%D0%BB%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9" title="Дождь был продолжительный" class="mw-redirect">«Дождь был продолжительный…»</a></li>
+        <li><a href="/wiki/%D0%96%D0%B5%D0%BD%D0%B8%D1%82%D1%8C%D0%B1%D0%B0_(%D0%BF%D1%8C%D0%B5%D1%81%D0%B0)" title="Женитьба (пьеса)">Женитьба</a></li>
+        <li><a href="/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BB%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BC%D0%B5%D1%81%D1%82%D0%BE" title="Заколдованное место">Заколдованное место</a></li>
+        <li><a href="/wiki/%D0%97%D0%B0%D0%BF%D0%B8%D1%81%D0%BA%D0%B8_%D1%81%D1%83%D0%BC%D0%B0%D1%81%D1%88%D0%B5%D0%B4%D1%88%D0%B5%D0%B3%D0%BE" title="Записки сумасшедшего">Записки сумасшедшего</a></li>
+        <li><a href="/wiki/%D0%98%D0%B2%D0%B0%D0%BD_%D0%A4%D1%91%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87_%D0%A8%D0%BF%D0%BE%D0%BD%D1%8C%D0%BA%D0%B0_%D0%B8_%D0%B5%D0%B3%D0%BE_%D1%82%D1%91%D1%82%D1%83%D1%88%D0%BA%D0%B0" title="Иван Фёдорович Шпонька и его тётушка">Иван Фёдорович Шпонька и его тётушка</a></li>
+        <li><a href="/wiki/%D0%98%D1%82%D0%B0%D0%BB%D0%B8%D1%8F_(%D1%81%D1%82%D0%B8%D1%85%D0%BE%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%B5)" title="Италия (стихотворение)">Италия</a></li>
+        <li><a href="/wiki/%D0%98%D0%B3%D1%80%D0%BE%D0%BA%D0%B8_(%D0%BA%D0%BE%D0%BC%D0%B5%D0%B4%D0%B8%D1%8F)" title="Игроки (комедия)">Игроки</a></li>
+        <li><a href="/wiki/%D0%9A%D0%BE%D0%BB%D1%8F%D1%81%D0%BA%D0%B0_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)" title="Коляска (повесть)">Коляска</a></li>
+        <li><a href="/wiki/%D0%9B%D0%B0%D0%BA%D0%B5%D0%B9%D1%81%D0%BA%D0%B0%D1%8F" title="Лакейская" class="mw-redirect">Лакейская</a></li>
+        <li><a href="/wiki/%D0%9C%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BD%D0%BE%D1%87%D1%8C,_%D0%B8%D0%BB%D0%B8_%D1%83%D1%82%D0%BE%D0%BF%D0%BB%D0%B5%D0%BD%D0%BD%D0%B8%D1%86%D0%B0" title="Майская ночь, или утопленница" class="mw-redirect">Майская ночь, или утопленница</a></li>
+        <li><a href="/wiki/%D0%9C%D1%91%D1%80%D1%82%D0%B2%D1%8B%D0%B5_%D0%B4%D1%83%D1%88%D0%B8" title="Мёртвые души">Мёртвые души</a></li>
+        <li><a href="/wiki/%D0%9C%D0%B8%D1%80%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_(%D1%81%D0%B1%D0%BE%D1%80%D0%BD%D0%B8%D0%BA)" title="Миргород (сборник)">Миргород</a></li>
+        <li><a href="/w/index.php?title=%D0%9D%D0%B0%D0%B1%D1%80%D0%BE%D1%81%D0%BA%D0%B8_%D0%B4%D1%80%D0%B0%D0%BC%D1%8B_%D0%B8%D0%B7_%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8&amp;action=edit&amp;redlink=1" class="new" title="Наброски драмы из украинской истории (страница отсутствует)">Наброски драмы из украинской истории</a></li>
+        <li><a href="/wiki/%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)" title="Невский проспект (повесть)">Невский проспект</a></li>
+        <li><a href="/wiki/%D0%9D%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE_%D1%81%D0%BB%D0%BE%D0%B2_%D0%BE_%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B5" title="Несколько слов о Пушкине">Несколько слов о Пушкине</a></li>
+        <li><a href="/w/index.php?title=%D0%9D%D0%B5%D1%87%D1%82%D0%BE_%D0%BE_%D0%9D%D0%B5%D0%B6%D0%B8%D0%BD%D0%B5,_%D0%B8%D0%BB%D0%B8_%D0%94%D1%83%D1%80%D0%B0%D0%BA%D0%B0%D0%BC_%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD_%D0%BD%D0%B5_%D0%BF%D0%B8%D1%81%D0%B0%D0%BD&amp;action=edit&amp;redlink=1" class="new" title="Нечто о Нежине, или Дуракам закон не писан (страница отсутствует)">Нечто о Нежине, или Дуракам закон не писан</a>&nbsp;— юношеская сатира. не сохранилась</li>
+        <li><a href="/wiki/%D0%9D%D0%BE%D1%81_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)" title="Нос (повесть)">Нос</a></li>
+        <li><a href="/wiki/%D0%9D%D0%BE%D1%87%D0%B8_%D0%BD%D0%B0_%D0%B2%D0%B8%D0%BB%D0%BB%D0%B5" title="Ночи на вилле">Ночи на вилле</a></li>
+        <li><a href="/wiki/%D0%9D%D0%BE%D1%87%D1%8C_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4_%D0%A0%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%BE%D0%BC_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)" title="Ночь перед Рождеством (повесть)" class="mw-redirect">Ночь перед Рождеством</a></li>
+        <li><a href="/w/index.php?title=%D0%9E%D0%B1_%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B5_%D0%BD%D1%8B%D0%BD%D0%B5%D1%88%D0%BD%D0%B5%D0%B3%D0%BE_%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8&amp;action=edit&amp;redlink=1" class="new" title="Об архитектуре нынешнего времени (страница отсутствует)">Об архитектуре нынешнего времени</a></li>
+        <li><a href="/w/index.php?title=%D0%9E_%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B8_%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D1%8B_%D0%B2_1834_%D0%B8_1835_%D0%B3%D0%BE%D0%B4%D1%83&amp;action=edit&amp;redlink=1" class="new" title="О движении журнальной литературы в 1834 и 1835 году (страница отсутствует)">О движении журнальной литературы в 1834 и 1835 году</a></li>
+        <li><a href="/wiki/%D0%9E_%D0%BC%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D1%85_%D0%BF%D0%B5%D1%81%D0%BD%D1%8F%D1%85" title="О малороссийских песнях">О малороссийских песнях</a></li>
+        <li><a href="/w/index.php?title=%D0%9E_%C2%AB%D0%A1%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA%D0%B5%C2%BB&amp;action=edit&amp;redlink=1" class="new" title="О «Современнике» (страница отсутствует)">О «Современнике»</a></li>
+        <li><a href="/w/index.php?title=%D0%9E_%D1%81%D0%BE%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85_%D0%B2_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5&amp;action=edit&amp;redlink=1" class="new" title="О сословиях в государстве (страница отсутствует)">О сословиях в государстве</a></li>
+        <li><a href="/w/index.php?title=%D0%9E%D1%82%D1%80%D1%8B%D0%B2%D0%BE%D0%BA_%D0%B8%D0%B7_%D0%BD%D0%B5%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%BE%D0%B9_%D0%B4%D1%80%D0%B0%D0%BC%D1%8B&amp;action=edit&amp;redlink=1" class="new" title="Отрывок из неизвестной драмы (страница отсутствует)">&lt;отрывок из неизвестной драмы&gt;</a></li>
+        <li><a href="/wiki/%D0%9E%D1%82%D1%80%D1%8B%D0%B2%D0%BE%D0%BA_%D0%B8%D0%B7_%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%B0,_%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%BC_%D0%B2%D1%81%D0%BA%D0%BE%D1%80%D0%B5_%D0%BF%D0%BE%D1%81%D0%BB%D0%B5_%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%C2%AB%D0%A0%D0%B5%D0%B2%D0%B8%D0%B7%D0%BE%D1%80%D0%B0%C2%BB_%D0%BA_%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83_%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%83" title="Отрывок из письма, писанного автором вскоре после первого представления «Ревизора» к одному литератору" class="mw-redirect">Отрывок из письма, писанного автором вскоре после первого представления «Ревизора» к одному литератору</a></li>
+        <li><a href="/w/index.php?title=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B5_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%BA%D0%B8_1836_%D0%B3%D0%BE%D0%B4%D0%B0&amp;action=edit&amp;redlink=1" class="new" title="Петербургские записки 1836 года (страница отсутствует)">Петербургские записки 1836 года</a></li>
+        <li><a href="/wiki/%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B5_%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D0%B8" title="Петербургские повести">Петербургские повести</a></li>
+        <li><a href="/wiki/%D0%9F%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C_%D0%BE_%D0%BA%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B5_%D0%9A%D0%BE%D0%BF%D0%B5%D0%B9%D0%BA%D0%B8%D0%BD%D0%B5" title="Повесть о капитане Копейкине" class="mw-redirect">Повесть о капитане Копейкине</a></li>
+        <li><a href="/wiki/%D0%9F%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C_%D0%BE_%D1%82%D0%BE%D0%BC,_%D0%BA%D0%B0%D0%BA_%D0%BF%D0%BE%D1%81%D1%81%D0%BE%D1%80%D0%B8%D0%BB%D1%81%D1%8F_%D0%98%D0%B2%D0%B0%D0%BD_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87_%D1%81_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%BC_%D0%9D%D0%B8%D0%BA%D0%B8%D1%84%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87%D0%B5%D0%BC" title="Повесть о том, как поссорился Иван Иванович с Иваном Никифоровичем">Повесть о том, как поссорился Иван Иванович с Иваном Никифоровичем</a></li>
+        <li><a href="/wiki/%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)" title="Портрет (повесть)">Портрет</a></li>
+        <li><a href="/wiki/%D0%9F%D1%80%D0%BE%D0%BF%D0%B0%D0%B2%D1%88%D0%B0%D1%8F_%D0%B3%D1%80%D0%B0%D0%BC%D0%BE%D1%82%D0%B0" title="Пропавшая грамота">Пропавшая грамота</a></li>
+        <li><a href="/wiki/%D0%A0%D0%B0%D0%B7%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BE_%D0%91%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9_%D0%9B%D0%B8%D1%82%D1%83%D1%80%D0%B3%D0%B8%D0%B8" title="Размышления о Божественной Литургии">Размышления о Божественной Литургии</a></li>
+        <li><a href="/wiki/%D0%A0%D0%B5%D0%B2%D0%B8%D0%B7%D0%BE%D1%80_(%D0%BA%D0%BE%D0%BC%D0%B5%D0%B4%D0%B8%D1%8F)" title="Ревизор (комедия)">Ревизор</a></li>
+        <li><a href="/w/index.php?title=%D0%A0%D0%B5%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D0%B8_%D0%B8%D0%B7_%C2%AB%D0%A1%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA%D0%B0%C2%BB&amp;action=edit&amp;redlink=1" class="new" title="Рецензии из «Современника» (страница отсутствует)">Рецензии из «Современника»</a></li>
+        <li><a href="/w/index.php?title=%D0%A0%D0%B5%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D0%B8,_%D0%BD%D0%B5_%D0%B2%D0%BE%D1%88%D0%B5%D0%B4%D1%88%D0%B8%D0%B5_%D0%B2_%C2%AB%D0%A1%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA%C2%BB&amp;action=edit&amp;redlink=1" class="new" title="Рецензии, не вошедшие в «Современник» (страница отсутствует)">Рецензии, не вошедшие в «Современник»</a></li>
+        <li><a href="/wiki/%D0%A0%D0%B8%D0%BC_(%D0%BE%D1%82%D1%80%D1%8B%D0%B2%D0%BE%D0%BA)" title="Рим (отрывок)">Рим</a></li>
+        <li><a href="/w/index.php?title=%D0%A0%D1%83%D0%B4%D0%BE%D0%BA%D0%BE%D0%BF%D0%BE%D0%B2&amp;action=edit&amp;redlink=1" class="new" title="Рудокопов (страница отсутствует)">Рудокопов</a></li>
+        <li><a href="/w/index.php?title=%D0%A1%D0%BA%D1%83%D0%BB%D1%8C%D0%BF%D1%82%D1%83%D1%80%D0%B0,_%D0%B6%D0%B8%D0%B2%D0%BE%D0%BF%D0%B8%D1%81%D1%8C_%D0%B8_%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0&amp;action=edit&amp;redlink=1" class="new" title="Скульптура, живопись и музыка (страница отсутствует)">Скульптура, живопись и музыка</a></li>
+        <li><a href="/w/index.php?title=%D0%A1%D0%B5%D0%BC%D1%91%D0%BD_%D0%A1%D0%B5%D0%BC%D1%91%D0%BD%D0%BE%D0%B2%D0%B8%D1%87_%D0%91%D0%B0%D1%82%D1%8E%D1%88%D0%B5%D0%BA&amp;action=edit&amp;redlink=1" class="new" title="Семён Семёнович Батюшек (страница отсутствует)">Семён Семёнович Батюшек</a></li>
+        <li><a href="/wiki/%D0%A1%D0%BE%D1%80%D0%BE%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%8F%D1%80%D0%BC%D0%B0%D1%80%D0%BA%D0%B0_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)" title="Сорочинская ярмарка (повесть)">Сорочинская ярмарка</a></li>
+        <li><a href="/wiki/%D0%A1%D1%82%D0%B0%D1%80%D0%BE%D1%81%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B5_%D0%BF%D0%BE%D0%BC%D0%B5%D1%89%D0%B8%D0%BA%D0%B8" title="Старосветские помещики">Старосветские помещики</a></li>
+        <li><a href="/wiki/%D0%A1%D1%82%D1%80%D0%B0%D1%88%D0%BD%D0%B0%D1%8F_%D0%BC%D0%B5%D1%81%D1%82%D1%8C" title="Страшная месть">Страшная месть</a></li>
+        <li><a href="/wiki/%D0%A1%D1%82%D1%80%D0%B0%D1%88%D0%BD%D0%B0%D1%8F_%D1%80%D1%83%D0%BA%D0%B0" title="Страшная рука" class="mw-redirect">Страшная рука</a></li>
+        <li><a href="/wiki/%D0%A2%D0%B0%D1%80%D0%B0%D1%81_%D0%91%D1%83%D0%BB%D1%8C%D0%B1%D0%B0_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)" title="Тарас Бульба (повесть)" class="mw-redirect">Тарас Бульба</a></li>
+        <li><a href="/wiki/%D0%A2%D0%B5%D0%B0%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D1%8A%D0%B5%D0%B7%D0%B4_%D0%BF%D0%BE%D1%81%D0%BB%D0%B5_%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BD%D0%BE%D0%B2%D0%BE%D0%B9_%D0%BA%D0%BE%D0%BC%D0%B5%D0%B4%D0%B8%D0%B8" title="Театральный разъезд после представления новой комедии" class="mw-redirect">Театральный разъезд после представления новой комедии</a></li>
+        <li><a href="/w/index.php?title=1834_(%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8C)&amp;action=edit&amp;redlink=1" class="new" title="1834 (Гоголь) (страница отсутствует)">1834</a></li>
+        <li><a href="/w/index.php?title=%D0%A2%D1%8F%D0%B6%D0%B1%D0%B0_(%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8C)&amp;action=edit&amp;redlink=1" class="new" title="Тяжба (Гоголь) (страница отсутствует)">Тяжба</a></li>
+        <li><a href="/wiki/%D0%A3%D1%82%D1%80%D0%BE_%D0%B4%D0%B5%D0%BB%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0" title="Утро делового человека">Утро делового человека</a></li>
+        <li><a href="/w/index.php?title=%C2%AB%D0%A4%D0%BE%D0%BD%D0%B0%D1%80%D1%8C_%D1%83%D0%BC%D0%B8%D1%80%D0%B0%D0%BB%E2%80%A6%C2%BB&amp;action=edit&amp;redlink=1" class="new" title="«Фонарь умирал…» (страница отсутствует)">«Фонарь умирал…»</a></li>
+        <li><a href="/w/index.php?title=%D0%A7%D1%82%D0%BE_%D1%8D%D1%82%D0%BE%3F&amp;action=edit&amp;redlink=1" class="new" title="Что это? (страница отсутствует)">Что это?</a></li>
+        <li><a href="/wiki/%D0%A8%D0%B8%D0%BD%D0%B5%D0%BB%D1%8C_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)" title="Шинель (повесть)">Шинель</a></li>
+        <li><a href="/wiki/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81%D0%BB%D0%BE%D0%B2%D0%B5%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%B4%D0%BB%D1%8F_%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%8E%D0%BD%D0%BE%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B0" title="Учебная книга словесности для русского юношества">Учебная книга словесности для русского юношества</a></li>
+    </ul>
     </div>
 
 </body>

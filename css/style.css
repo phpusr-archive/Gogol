@@ -1,3 +1,13 @@
 div.fixed {
     position: fixed;
 }
+
+/** Список в несколько столбцов */
+.autocolumnlist .column {
+    float: left;
+    width: 430px;
+}
+.autocolumnlist li {
+    margin: 5px 15px;
+    vertical-align: top;
+}
