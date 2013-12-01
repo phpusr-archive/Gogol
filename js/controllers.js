@@ -6,7 +6,7 @@ app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
         {name: 'Биография', link: '#bio', path: '/bio'},
         {name: 'Фотогалерея', link: '#photo', path: '/photo'},
         {name: 'Видео', link: '#video', path: '/video'},
-        {name: 'Произведения', link: '#artworks', path: '/artworks'}
+        {name: 'Произведения', link: '#artwork', path: '/artwork'}
     ];
 
     //Смена страницы

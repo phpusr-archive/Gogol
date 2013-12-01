@@ -9,8 +9,8 @@ app.config(['$routeProvider', function($routeProvider) {
         .when('/bio', {templateUrl: 'partials/bio.html', controller: 'BioCtrl'})
         .when('/photo', {templateUrl: 'partials/photos.html', controller: 'PhotoCtrl'})
         .when('/video', {templateUrl: 'partials/videos.html', controller: 'VideoCtrl'})
-        .when('/artworks', {templateUrl: 'partials/artworks.html', controller: 'ArtworksCtrl'})
-        .when('/artworks/:artworkId', {templateUrl: 'partials/artwork-read.html', controller: 'ArtworkReadCtrl'})
+        .when('/artwork', {templateUrl: 'partials/artworks.html', controller: 'ArtworksCtrl'})
+        .when('/artwork/:artworkId', {templateUrl: 'partials/artwork-read.html', controller: 'ArtworkReadCtrl'})
         .otherwise({redirectTo: '/main'});
 }]);
 /** Выполнение функции при выводе всех элементов ng-repeat */
