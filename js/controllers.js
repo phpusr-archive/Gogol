@@ -9,7 +9,7 @@ app.controller('IndexCtrl', function MainCtrl($rootScope, $scope, $location) {
         {name: 'Произведения', link: 'artwork'}
     ];
 
-    $scope.title = 'Сайт посвященный Гоголю Н.В.';
+    $scope.title = 'Сайт, посвященный Гоголю Н.В.';
     $scope.copyright = 'Анна Доронина 2013';
 
     //Смена страницы
