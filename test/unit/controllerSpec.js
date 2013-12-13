@@ -18,7 +18,7 @@ describe('App controllers', function() {
             ctrl = $controller('MainCtrl', {$scope: scope, $rootScope: rootScope});
         }));
 
-        it('should create "data" model with 3 books', function() {
+        it('Должен создать "data" модель с 3-мя книгами', function() {
             expect(scope.data).toBeUndefined();
             $httpBackend.flush();
 
@@ -39,11 +39,11 @@ describe('App controllers', function() {
             ctrl = $controller('PhotoCtrl', {$scope: scope, $rootScope: rootScope});
         }));
 
-        it('should create "opt.nav" = thumbs', function() {
+        it('Должен создать "opt.nav" = thumbs', function() {
             expect('thumbs').toBe(scope.opt.nav);
         });
 
-        it('should create "opt.nav" = thumbs ', function() {
+        it('Должен создать "opt.height" = 400 ', function() {
             expect(400).toBe(scope.opt.height);
         });
 
