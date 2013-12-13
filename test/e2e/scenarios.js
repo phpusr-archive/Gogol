@@ -5,6 +5,12 @@ describe('Gogol App', function() {
         expect(browser().location().url()).toBe('/main');
     });
 
+    it('Должен проверить копирайт', function() {
+        browser().navigateTo('../../index.html');
+        expect(binding('copyright')).toBe('Анна Доронина 2013');
+        expect(element('div.footer p').text()).toBe('© Анна Доронина 2013');
+    });
+
     describe('Main view', function() {
 
         beforeEach(function() {
