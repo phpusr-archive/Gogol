@@ -57,4 +57,36 @@ describe('Gogol App', function() {
 
     });
 
+    describe('Artwork view', function() {
+
+        beforeEach(function() {
+            browser().navigateTo('../../index.html#/artwork');
+        });
+
+        it('Должен найти 6 произведений', function() {
+            expect(repeater('div.col-md-3 h4').count()).toBe(6);
+        });
+
+        it('Должен найти 63 остальных произведения', function() {
+            expect(repeater('ul div.column li').count()).toBe(63);
+        });
+
+    });
+
+    describe('Artwork 3 view', function() {
+
+        beforeEach(function() {
+            browser().navigateTo('../../index.html#/artwork/3');
+        });
+
+        it('Должен проверить название произведения', function() {
+            expect(binding('data.name')).toBe('Ревизор');
+        });
+
+        it('Должен проверить адрес постера', function() {
+            expect(element('div img').attr('src')).toBe('data/artwork/3/thumb.jpg');
+        });
+
+    });
+
 });
