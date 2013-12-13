@@ -1,0 +1,347 @@
+KIT ;
+  IDL VERSION 1.2.8 ;
+  TITLE 'Редактирование информации на сайте' ;
+  AUTHOR 'Доронин' ;
+  CREATION DATE 7/12/2013 ;
+  PROJECT NAME 'gogol' ;
+
+  MODEL 'gogol'
+    {LWI
+    F 0 -13 0 0 0 400
+      0 0 0 0 3 2 1 34
+      100 'Arial'
+    F 1 -24 0 0 0 400
+      0 0 0 0 3 2 1 34
+      180 'Arial'
+    F 2 -11 0 0 0 400
+      0 0 0 204 3 2 1 49
+      80 'Courier New'
+    F 3 -13 0 900 900 400
+      0 0 0 204 3 2 1 34
+      100 'Arial'
+    F 4 -13 0 0 0 400
+      0 0 0 204 3 2 1 34
+      100 'Arial'
+    F 5 -24 0 0 0 400
+      0 0 0 204 3 2 1 34
+      180 'Arial'
+    D 4 4 4 4 4 5 4 4 2
+    G 4 5
+    T 'WORKING'
+    R 77
+    M 0  }
+ ;
+    AUTHOR 'Доронин' ;
+    PROJECT NAME 'gogol' ;
+
+    DIAGRAM GRAPHIC A-0 ;
+      CREATION DATE 7/12/2013 ;
+      REVISION DATE 7/12/2013 ;
+      TITLE 'Редактирование информации на сайте' ;
+      STATUS WORKING ;
+
+      BOX 0 ;
+        NAME '{LWI I 4 255 255 255}Редактирование информации на сайте' ;
+        BOX COORDINATES (0,32462;0,61789) (0,64923;0,30894) ;
+        DETAIL REFERENCE N A0 ;
+      ENDBOX ;
+
+      ARROWSEG 1 ;
+        SOURCE BORDER ;
+        PATH (0,01803;0,43902) (0,32462;0,43902) ;
+        LABEL '{LWI I 4 255 255 }Необработанная<CR>информация о<CR>писателе' ;
+
+        LABEL COORDINATES (0,08747;0,36585) ;
+        SINK BOX 0I1 ;
+      ENDSEG ;
+
+      ARROWSEG 4 ;
+        SOURCE BORDER ;
+        PATH (0,49594;0,95935) (0,49594;0,61789) ;
+        LABEL '{LWI I 4 255 255 }Алгоритм<CR>обработки данных' ;
+        LABEL COORDINATES (0,50316;0,78699) ;
+        SINK BOX 0M1 ;
+      ENDSEG ;
+
+      ARROWSEG 3 ;
+        SOURCE BORDER ;
+        PATH (0,50045;0,03252) (0,50045;0,30894) ;
+        LABEL '{LWI I 4 255 255 }Адрес web-сервера' ;
+        LABEL COORDINATES (0,50766;0,16911) ;
+        SINK BOX 0C1 ;
+      ENDSEG ;
+
+      ARROWSEG 2 ;
+        SOURCE BOX 0O1 ;
+        PATH (0,64923;0,46341) (0,97836;0,46341) ;
+        LABEL '{LWI I 4 255 255 }Структурированная<CR>информация о писателе' ;
+
+        LABEL COORDINATES (0,76195;0,41789) ;
+        SINK BORDER ;
+      ENDSEG ;
+
+    ENDDIAGRAM ;
+
+    DIAGRAM GRAPHIC A0 ;
+      CREATION DATE 7/12/2013 ;
+      REVISION DATE 7/12/2013 ;
+      TITLE 'Редактирование информации на сайте' ;
+      STATUS WORKING ;
+
+      BOX 1 ;
+        NAME '{LWI I 4 255 255 255}Ввод информации о<CR>писателе' ;
+        BOX COORDINATES (0,15329;0,25203) (0,28855;0,13821)  ;
+      ENDBOX ;
+
+      BOX 2 ;
+        NAME '{LWI I 4 255 255 255}Проверка введенной<CR>информации' ;
+        BOX COORDINATES (0,36519;0,39024) (0,50045;0,27642)  ;
+      ENDBOX ;
+
+      BOX 3 ;
+        NAME '{LWI I 4 255 255 255}Сохранение<CR>информации в БД' ;
+        BOX COORDINATES (0,55455;0,56911) (0,68981;0,45528)  ;
+      ENDBOX ;
+
+      BOX 4 ;
+        NAME '{LWI I 4 255 255 255}Вывод информации в<CR>виде HTML-страниц' ;
+        BOX COORDINATES (0,73940;0,74797) (0,87466;0,63415)  ;
+      ENDBOX ;
+
+      ARROWSEG 2 ;
+        SOURCE BORDER I1 (0,00451;0,17886) ;
+        PATH (0,01803;0,17073) (0,12173;0,17073) (0,12173;0,20325) (0,15329;0,
+20325) ;
+        LABEL '{LWI I 4 255 255 }Необработанная<CR>информация о<CR>писателе' ;
+
+        LABEL COORDINATES (0,01172;0,09756) ;
+        SINK BOX 1I1 ;
+      ENDSEG ;
+
+      ARROWSEG 4 ;
+        SOURCE TUNNEL  {LWI Q}BORDER ;
+        PATH (0,21641;0,95935) (0,21641;0,25203) ;
+        LABEL '{LWI I 4 255 255 }Администратор сайта' ;
+        LABEL COORDINATES (0,22362;0,71382) ;
+        SINK BOX 1M1 ;
+      ENDSEG ;
+
+      ARROWSEG 8 ;
+        SOURCE BORDER C1 (0,40577;0,02764) ;
+        PATH (0,41479;0,03252) (0,41479;0,07317) ;
+        LABEL 'Адрес web-сервера' ;
+        SINK BRANCH 9 10 ;
+      ENDSEG ;
+
+      ARROWSEG 12 ;
+        SOURCE BORDER M1 (0,52299;0,98049) ;
+        PATH (0,53201;0,95935) (0,53201;0,90244) ;
+        LABEL 'Алгоритм обработки данных' ;
+        SINK BRANCH 15 16 ;
+      ENDSEG ;
+
+      ARROWSEG 1 ;
+        SOURCE TUNNEL  {LWI Q}BORDER ;
+        PATH (0,66276;0,03252) (0,66276;0,21951) (0,63120;0,21951) (0,63120;0,
+45528) ;
+        LABEL '{LWI I 4 255 255 }Адрес сервера<CR>БД' ;
+        LABEL COORDINATES (0,66997;0,12033) ;
+        SINK BOX 3C1 ;
+      ENDSEG ;
+
+      ARROWSEG 5 ;
+        SOURCE BOX 1O1 ;
+        PATH (0,28855;0,20325) (0,31109;0,20325) (0,31109;0,32520) (0,36519;0,
+32520) ;
+        LABEL '{LWI I 4 255 255 }Введеная<CR>информация' ;
+        LABEL COORDINATES (0,31740;0,21138) ;
+        SINK BOX 2I1 ;
+      ENDSEG ;
+
+      ARROWSEG 6 ;
+        SOURCE BOX 2O1 ;
+        PATH (0,50045;0,34146) (0,53652;0,34146) (0,53652;0,52033) (0,55455;0,
+52033) ;
+        LABEL '{LWI I 4 255 255 }Проверенная<CR>информация' ;
+        LABEL COORDINATES (0,54373;0,37073) ;
+        SINK BOX 3I1 ;
+      ENDSEG ;
+
+      ARROWSEG 7 ;
+        SOURCE BOX 3O1 ;
+        PATH (0,68981;0,49593) (0,71235;0,49593) (0,71235;0,69106) (0,73940;0,
+69106) ;
+        LABEL '{LWI I 4 255 255 }Информация<CR>в виде<CR>объектов' ;
+        LABEL COORDINATES (0,71957;0,49919) ;
+        SINK BOX 4I1 ;
+      ENDSEG ;
+
+      ARROWSEG 3 ;
+        SOURCE BOX 4O1 ;
+        PATH (0,87466;0,69919) (0,88819;0,69919) (0,88819;0,44715) (0,97836;0,
+44715) ;
+        LABEL '{LWI I 4 255 255 }Структурированная<CR>информация о писателе' ;
+
+        LABEL COORDINATES (0,85753;0,39837) ;
+        SINK BORDER O1 (0,98106;0,45528) ;
+      ENDSEG ;
+
+      ARROWSEG 9 ;
+        SOURCE BRANCH 8 ;
+        PATH (0,41479;0,07317) (0,21641;0,07317) (0,21641;0,13821) ;
+        LABEL '{LWI I 4 255 255 }Адрес web-сервера' ;
+        LABEL COORDINATES (0,27322;0,05528) ;
+        SINK BOX 1C1 ;
+      ENDSEG ;
+
+      ARROWSEG 10 ;
+        SOURCE BRANCH 8 ;
+        PATH (0,41479;0,07317) (0,43282;0,07317) ;
+        LABEL 'Адрес web-сервера' ;
+        SINK BRANCH 17 11 ;
+      ENDSEG ;
+
+      ARROWSEG 17 ;
+        SOURCE BRANCH 10 ;
+        PATH (0,43282;0,07317) (0,82507;0,07317) (0,82507;0,63415) ;
+        LABEL 'Адрес web-сервера' ;
+        SINK BOX 4C1 ;
+      ENDSEG ;
+
+      ARROWSEG 14 ;
+        SOURCE BRANCH 15 ;
+        PATH (0,53201;0,77236) (0,64022;0,77236) (0,64022;0,56911) ;
+        LABEL 'Алгоритм обработки данных' ;
+        SINK BOX 3M1 ;
+      ENDSEG ;
+
+      ARROWSEG 16 ;
+        SOURCE BRANCH 12 ;
+        PATH (0,53201;0,90244) (0,82958;0,90244) (0,82958;0,74797) ;
+        LABEL 'Алгоритм обработки данных' ;
+        SINK BOX 4M1 ;
+      ENDSEG ;
+
+      ARROWSEG 11 ;
+        SOURCE BRANCH 10 ;
+        PATH (0,43282;0,07317) (0,43282;0,27642) ;
+        LABEL 'Адрес web-сервера' ;
+        SINK BOX 2C1 ;
+      ENDSEG ;
+
+      ARROWSEG 13 ;
+        SOURCE BRANCH 15 ;
+        PATH (0,53201;0,77236) (0,53201;0,69919) (0,43733;0,69919) (0,43733;0,
+39024) ;
+        LABEL '{LWI I 4 255 255 }Алгоритм<CR>обработки данных' ;
+        LABEL COORDINATES (0,42831;0,74797) ;
+        SINK BOX 2M1 ;
+      ENDSEG ;
+
+      ARROWSEG 15 ;
+        SOURCE BRANCH 12 ;
+        PATH (0,53201;0,90244) (0,53201;0,77236) ;
+        LABEL 'Алгоритм обработки данных' ;
+        SINK BRANCH 13 14 ;
+      ENDSEG ;
+
+    ENDDIAGRAM ;
+
+    DIAGRAM GLOSSARY A0G {LWI A 
+      TERM 'Редактирование информации на сайте'
+      ''
+      S 'WORKING'
+      C 255 255 255
+      F 1.000000
+      TERM 'Ввод информации о писателе'
+      ''
+      S 'WORKING'
+      C 255 255 255
+      F 1.000000
+      TERM 'Проверка введенной информации'
+      ''
+      S 'WORKING'
+      C 255 255 255
+      F 1.000000
+      TERM 'Сохранение информации в БД'
+      ''
+      S 'WORKING'
+      C 255 255 255
+      F 1.000000
+      TERM 'Вывод информации в виде HTML-страниц'
+      ''
+      S 'WORKING'
+      C 255 255 255
+      F 1.000000
+     ENDGLOSS } ;
+     GLOSSARY ;
+      TERM 'Необработанная информация о писателе'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Структурированная информация о писателе'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Алгоритм обработки данных'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Администратор сайта'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Проверенная информация'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Информация в виде классов'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Информация в виде объектов'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Unnamed Arrow / 7'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Введеная информация'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Адрес сервера'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Адрес сервера БД'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Адрес web-сервера'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Unnamed Arrow / 12'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+     ENDGLOSS ;
+    ENDDIAGRAM ;
+  ENDMODEL ;
+
+ENDKIT ;
